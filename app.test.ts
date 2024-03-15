@@ -25,7 +25,7 @@ describe("POST /properties", () => {
     expect(response.statusCode).toBe(201);
     expect(response.body).toEqual(newProperty);
   });
-  it("returns 400 Bad Request when required fields are missing", async () => {
+  it("returns 400 Bad Request when required field is the wrong type", async () => {
     const malformedProperty = {
       id: 3,
       address: "new address",
