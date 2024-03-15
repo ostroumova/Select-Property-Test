@@ -21,8 +21,6 @@ router.get("/", (req: Request, res: Response) => {
 router.post("/", (req: Request, res: Response) => {
   const { error } = propertySchema.validate(req.body);
   if (error) {
-    console.log(error);
-
     return res.status(400).send(error.details[0].message);
   }
   const newProperty: Property = req.body;
