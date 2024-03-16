@@ -1,8 +1,17 @@
 import { Router, Request, Response } from "express";
 import { Property } from "../models/Property";
 import Joi from "joi";
+import ManchesterOne from "../../../assets/images/ManchesterOne.jpg";
 
-let properties: Property[] = [];
+let properties: Property[] = [
+  {
+    id: 1,
+    address: "Manchester One",
+    price: 500000,
+    rating: 3,
+    image: ManchesterOne,
+  },
+];
 
 const router = Router();
 
